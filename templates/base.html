@@ -13,6 +13,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark navbar-wildev sticky-top">
   <div class="container">
+<<<<<<< HEAD
     <a class="navbar-brand fw-bold" href="{{ url_for('home') }}">
       <span class="brand-dot"></span> WilDev <span class="brand-sub">Shop</span>
     </a>
@@ -25,6 +26,23 @@
     <!-- Si querés mantener el menú colapsable de Bootstrap, dejalo.
          Si no lo usás, podés borrar todo este bloque collapse. -->
     <div class="collapse navbar-collapse" id="navMain">
+=======
+
+    <!-- LOGO -->
+    <a class="navbar-brand wildev-brand" href="{{ url_for('home') }}">
+      <span class="wildev-icon">⚡</span>
+      <span class="wildev-text">WilDev <span class="brand-sub">Shop</span></span>
+    </a>
+
+    <!-- BOTÓN CATEGORÍAS (drawer) -->
+    <button class="navbar-toggler d-lg-none" type="button" onclick="toggleCats()" aria-label="Categorías">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- NAV + BUSCADOR -->
+    <div class="collapse navbar-collapse" id="navMain">
+
+>>>>>>> 8d90886 (modificaciones del wildev shop)
       <form class="d-flex ms-lg-3 my-2 my-lg-0 flex-grow-1" action="{{ url_for('home') }}" method="get">
         <input class="form-control me-2 input-wildev" type="search" name="q" placeholder="Buscar productos…" value="{{ request.args.get('q','') }}">
         <button class="btn btn-wildev" type="submit">Buscar</button>
@@ -66,6 +84,10 @@
         {% endif %}
       </ul>
     </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8d90886 (modificaciones del wildev shop)
   </div>
 </nav>
 
@@ -87,8 +109,13 @@
 
 <footer class="footer-wildev py-4 mt-4">
   <div class="container small text-secondary d-flex flex-column flex-md-row justify-content-between gap-2">
+<<<<<<< HEAD
     <div>Demo ecommerce — Flask + SQLite</div>
     <div class="text-secondary">Hecho para iterar en VS Code. Sin pasarela de pago real.</div>
+=======
+    <div>© {{ now().year if now else "" }} WilDev Shop</div>
+    <div class="text-secondary">Tecnología, periféricos y más.</div>
+>>>>>>> 8d90886 (modificaciones del wildev shop)
   </div>
 </footer>
 
